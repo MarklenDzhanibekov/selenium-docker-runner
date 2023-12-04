@@ -2,10 +2,6 @@ pipeline{
 
     agent any
 
-    environment {
-        NUMBER = 3
-    }
-
     stages{
         
         stage('Run Test'){
@@ -19,5 +15,5 @@ pipeline{
                   sh "docker-compose down"
             }
         }
-
+    }
 }
