@@ -3,19 +3,19 @@ services:
   vendor-portal:
     image: marklen1984/selenium
     environment:
-    - BROWSER=chrome
-    - HUB_HOST=hub
-    - THREAD_COUNT=3
-    - TEST_SUITE=vendor-portal.xml
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - THREAD_COUNT=3
+      - TEST_SUITE=vendor-portal.xml
     volumes:
-    - C:\Users\Mark\Education\xyz\06-jenkins-ci-cd\01-jenkins\volumes\node\workspace\SELENIUM_DOCKER_RUNNER\output\vendor-portal:/home/selenium-docker/test-output
+      - ./output/vendor-portal:/home/selenium-docker/test-output
 
   flight-reservation:
     image: marklen1984/selenium
     environment:
-    - BROWSER=firefox
-    - HUB_HOST=hub
-    - THREAD_COUNT=4
-    - TEST_SUITE=flight-reservation.xml
+      - BROWSER=firefox
+      - HUB_HOST=hub
+      - THREAD_COUNT=4
+      - TEST_SUITE=flight-reservation.xml
     volumes:
-   - C:\Users\Mark\Education\xyz\06-jenkins-ci-cd\01-jenkins\volumes\node\workspace\SELENIUM_DOCKER_RUNNER\output\flight-reservation:/home/selenium-docker/test-output
+      - ./output/vendor-portal:/home/selenium-docker/test-output
